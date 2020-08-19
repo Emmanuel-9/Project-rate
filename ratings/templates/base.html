@@ -8,7 +8,7 @@
     {% if title %}
         <title>Project | {{title}}</title>
     {% else %}
-        <title> Project </title>
+        <title> Project-Rating</title>
     {% endif %}
     <script src="https://kit.fontawesome.com/fe77e56d10.js" crossorigin="anonymous"></script>
 
@@ -26,13 +26,6 @@
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav mr-auto navbar-link">
-                <li class="nav-item active">
-                  <a class="nav-link" href="{% url 'welcome' %}" style="font-family: Billabong; font-size:2em">Projects <span class="sr-only">(current)</span></a>
-                </li>               
-                
-              </ul>
-              
               <ul class="navbar-nav ml-auto navbar-link">
                 <li class="nav-item"> 
                     <form action="{% url 'search-user' %}">
@@ -58,10 +51,10 @@
                 </li>
                 {% else %}
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Login </a>
+                  <a class="nav-link" href="{% url 'login' %}">Login </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Register</a>
+                  <a class="nav-link" href="{% url 'register' %}">Register</a>
                 </li>
                 {% endif %}
                 
