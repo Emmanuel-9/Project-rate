@@ -1,9 +1,10 @@
 ## PROJECT RATE
 An application where users can post their projects and have them rated.
 
+## PRE-REQUISITES
+
 
 ## TECHNOLOGIES USED
-
 * Django
 * Python
 * HTML
@@ -25,10 +26,26 @@ An application where users can post their projects and have them rated.
 
 * In the activated virtual environment, install pip which would be used to install dependencies in Python, which can be using the   command: ` curl https://bootstrap.pypa.io/get-pip.py | python `
 
-* Install the dependencies used in the application ` pip install -r requirements.txt ` , the command will the interpreter to
-  install the dependencies in the file _requirements.txt_
+* Install the dependencies used in the application ` pip install -r requirements.txt `.
 
-* Run ` python3 manage.py runserver ` to run the application.
+* Create an .env file which contains the environment variables
+```
+SECRET_KEY='<Secret_key>'
+DEBUG=True 
+DB_NAME='<db_name>'
+DB_USER='<db_username>'
+DB_PASSWORD='<db_password>'
+DB_HOST='127.0.0.1'
+MODE='dev' 
+ALLOWED_HOSTS='.localhost','floating-falls-55062.herokuapp.com', '.127.0.0.1'
+DISABLE_COLLECTSTATIC=1
+```
+* Run the application 
+` python3 manage.py runserver `
+
+
+## LICENSE
+- This project is licensed under the MIT License - see the LICENSE.md file for details.
 
 
 ## AUTHOR
