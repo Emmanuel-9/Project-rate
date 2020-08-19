@@ -181,12 +181,13 @@ def profile(request):
     else:
         up_form = UserUpdateForm(instance=request.user)
         pr_form = ProfileUpdateForm(instance=request.user.profile)
-    content = {
+    context = {
         'user_form': up_form,
         'profile_form': pr_form,
-        'posts': posts
+        'posts': posts,
+        'messages': messages
     }
-    return render(request, 'users/profile.html', content)
+    return render(request, 'users/profile.html', context)
 
 
 
