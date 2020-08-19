@@ -1,9 +1,6 @@
 ## PROJECT RATE
 An application where users can post their projects and have them rated.
 
-## PRE-REQUISITES
-
-
 ## TECHNOLOGIES USED
 * Django
 * Python
