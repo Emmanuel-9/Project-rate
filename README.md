@@ -1,5 +1,5 @@
 ## PROJECT RATE
- A replica of Instagram
+An application where users can post their projects and have them rated.
 
 
 ## TECHNOLOGIES USED
