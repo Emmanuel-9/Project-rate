@@ -16,7 +16,7 @@ from .models import Post,Profile,Comment,Rating
 
 # Create your views here.
 def index(request):
-    title = 'Home'
+    
     all_posts = Post.get_all_posts()
     context = {
         'posts': all_posts,
@@ -158,7 +158,7 @@ def register(request):
             form.save()
             username = form.cleaned_data.get('username')
             email = form.cleaned_data.get('email')
-            messages.success(request, f'Account created')
+            
             return redirect('login')
     else:
         form = SignUpForm()

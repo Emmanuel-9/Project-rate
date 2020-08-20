@@ -51,6 +51,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 INSTALLED_APPS = [
     'bootstrap4',
+    'crispy_forms',
     'ratings.apps.RatingsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
