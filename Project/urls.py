@@ -24,16 +24,10 @@ from ratings import views as proj_views
 
 
 
-router = routers.DefaultRouter()
-router.register(r'profiles', user_views.ProfileViewSet)
-router.register(r'users', user_views.UserViewSet)
-router.register(r'posts', proj_views.PostViewSet)
-router.register(r'comments', proj_views.CommentViewSet)
-
+ 
 urlpatterns = [
     path(r'^admin/', admin.site.urls),
     path(r'',include('ratings.urls')),
-    path('v1/',include(router.urls)),
     path('register/',user_views.register, name='register'),
     path('login/', auth_views.LoginView.as_view(template_name='users/login.html'), name='login'),
     path('logout/', auth_views.LogoutView.as_view(template_name='users/logout.html'), name='logout'),
