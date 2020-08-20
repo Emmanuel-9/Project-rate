@@ -113,6 +113,7 @@ def add_comment(request, post_id):
     all_posts = Post.get_all_posts()   
     context = {
         'posts': all_posts,
+        'post:': post
     }
     if request.method == 'POST':
         content = request.POST.get('comment')
@@ -176,7 +177,7 @@ def profile(request):
         if up_form.is_valid() and pr_form.is_valid():
             up_form.save()
             pr_form.save()
-            messages.success(request, f'Account has been updated')
+            
             return redirect('profile')
     else:
         up_form = UserUpdateForm(instance=request.user)
@@ -185,7 +186,7 @@ def profile(request):
         'user_form': up_form,
         'profile_form': pr_form,
         'posts': posts,
-        'messages': messages
+        
     }
     return render(request, 'users/profile.html', context)
 
